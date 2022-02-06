@@ -1,0 +1,195 @@
+.wrapper {
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: auto;
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+
+
+.text-box1 .heading {
+    font-weight: bold;
+
+}
+
+.title {
+    font-weight: 900;
+    font-size: 50px;
+    color: #fff;
+}
+
+.text-box {
+    padding: 30px;
+}
+
+.text-box .title {
+
+    font-weight: bold;
+}
+
+.paragraph-box {
+    padding: 30px;
+    margin-top: -2%;
+    line-height: 1;
+}
+
+.social-icons {
+    padding: 20px;
+}
+
+.social-icons .fab {
+
+    width: 32px;
+    height: 33px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    line-height: 33px;
+    font-size: 20px;
+    color: white;
+    background: blue;
+    margin-right: 15px;
+    border-radius: 50%;
+
+}
+
+.about-image {
+    width: 100%;
+    padding: 5px;
+
+}
+
+
+/* About us First */
+
+.wrapper-content {
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: auto;
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+
+.text-box1 {
+    margin-top: 20%;
+    /* padding: 30px; */
+    /* font-size: 50%; */
+}
+
+.text-box1 .heading {
+    font-weight: bold;
+
+}
+
+.about-image-first {
+    margin-top: 10%;
+    width: 100%;
+    height: 70%;
+    padding: 5px
+}
+
+.button-about .btn-One {
+    text-decoration: none;
+    background-color: #0066CA;
+    color: #ffff;
+    padding: 5px 25px;
+    border-radius: 20px;
+    margin-top: 5%;
+    border: 10px solid #0066CA;
+}
+
+.button .btn-One:hover {
+    color: #fff;
+}
+
+
+/* About us Our Teams */
+.heading {
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+}
+
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+
+.our-team {
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.our-team img {
+    width: 100%;
+
+}
+
+.our-team .content {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding-top: 45%;
+    transform: perspective(400px) rotateX(-90deg);
+    transform-origin: center top 0;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+}
+
+.our-team:hover .content {
+    opacity: 1;
+    transform: perspective(400px) rotateX(0deg);
+}
+
+.our-team .social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.our-team .social li {
+    display: inline-block;
+}
+
+.our-team .social li a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 0;
+    background-color: blue;
+    margin-right: 5px;
+    transition: all 0.5s ease 0s;
+    position: relative;
+
+}
+
+.our-team .social li a:hover {
+    border-radius: 50%;
+    text-decoration: none;
+
+}
+
+@media screen and (max-width: 990px) {
+    .our-team {
+        margin-bottom: 30px;
+
+    }
+
+}
+
+.text-box, textarea {
+    filter: drop-shadow(2px 2px 5px #e5e5e5);
+}
