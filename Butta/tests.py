@@ -21,7 +21,9 @@ class Testviews(TestCase):
     def test_register_views(self):
         client=Client()
         url=reverse("register")
-        response=client.post(url,{'username':'test','email':'email', 'customer_password' :'customer_password'   })
-        self.assertEquas(response.status_code,200)
-        self.assertRedirects(response,"")
+        response=client.post(url,
+        {'customer_firstName':'test','customer_lastName':'case' ,'email':'testemail', 'customer_password' :'testpassword' 
+      })
+        self.assertEquals(response.status_code,302)
+        self.assertRedirects(response,"/login/")
 
