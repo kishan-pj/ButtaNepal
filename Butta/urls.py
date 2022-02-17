@@ -3,7 +3,7 @@ from Butta import views
 from django.views.generic.base import RedirectView
 from django.contrib.staticfiles.storage import staticfiles_storage
 
-app_name = "Butta"
+# app_name = "Butta"
 urlpatterns = [
     path("", views.index, name="Home"),
     path("register/", views.register, name="register"),
