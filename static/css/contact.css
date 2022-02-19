@@ -107,9 +107,10 @@
         flex-direction: column;
     }
 
+    /* 
     .contact-info, .contact-form {
         margin: 30px 50px;
-    }
+    } */
 
     .contact-form h2 {
         font-size: 30px;

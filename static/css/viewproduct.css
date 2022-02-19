@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'spoof';
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.text-box1 {
+    margin-top: 0%;
+    padding: 27px;
+    margin-bottom: -35px;
+    vertical-align: middle;
+
+}
+
+.text-box1 .heading {
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: -15px;
+
+}
+
+.paragraph-box1 {
+    font-weight: normal;
+    word-wrap: normal;
+    padding: 30px;
+    margin-top: -4%;
+    margin-bottom: 0%;
+    line-height: 1em;
+    font-size: 17px;
+}
+
+.about-image {
+    width: 500px;
+    height: 500px;
+}
+
+
+.uploadbutton a {
+    text-decoration: none;
+    background-color: #0066ca;
+    color: #ffff;
+    padding: 6px 20px;
+    font-size: 17px;
+    /* border-radius: 0px; */
+    margin-top: 0%;
+    border: 8px solid #0066ca;
+}
+
+.uploadbutton a:hover {
+    color: #fff;
+}
+
+.dashedbutton a {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #0066ca;
+    padding: 10px 20px;
+    font-size: 17px;
+    /* border-radius: 0px; */
+    margin-top: 0%;
+    border: 2px dashed #0066ca;
+    transition: ease 0.3s;
+
+}
+
+.dashedbutton a:hover {
+    color: #ffffff;
+    background-color: #0066ca;
+    transition: ease 0.3s;
+}
+
+
+.title {
+    font-weight: 500;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.col-md-6 .heading {
+    font-family: "montserrat";
+}
+
+

@@ -6,7 +6,7 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 app_name = "Butta"
 urlpatterns = [
     path("", views.home, name="Home"),
-    path("index/", views.index,name="index"),
+    path("index/", views.index, name="index"),
     path("register/", views.register, name="register"),
     path("login/", views.login_user, name="login"),
     path(
@@ -16,5 +16,10 @@ urlpatterns = [
     path("aboutus/", views.about, name="about"),
     path("contact/", views.contact, name="contact"),
     path("logout/", views.logout, name="logout"),
-    path("update/<customer_id>",views.update,name="update")
+    path("update/<customer_id>", views.update, name="update"),
+    path("checkout/", views.checkout),
+    path("productpage/<slug:user>", views.productpage, name="productpage"),
+    path("productpage/", views.productpage, name="productpage"),
+    path("productPage/", views.productPage, name="productPage"),
+    path("thankyou/", views.thankyou),
 ]

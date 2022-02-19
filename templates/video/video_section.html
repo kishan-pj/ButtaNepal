@@ -1,4 +1,4 @@
-<section class="container-fluid py-5 my-5" data-aos="zoom-in-up" style="background-color: #e5e5e5">
+<section class="container-fluid py-5 " data-aos="zoom-in-up" style="background-color: #e5e5e5">
     <div class="text-center">
         <p class="text">
             Video: How to order ?
@@ -17,13 +17,25 @@
     <div class="container pb-3">
         <div class="row g-1">
             <div class="col d-flex mx-5">
-                <div class="col"><button class="btn py-2 btn-block ms-5" style="
+                <div class="col">
+                    {% if user.is_login == True %}
+                    <a href="/productpage/{{user.customer_id}}" class="btn py-2 btn-block ms-5" style="
           border-radius: 0px;
           background-color: #0066ca;
           color: white;
           width: 100%;
           height: 100%;
-        "> Order my Custom T-shirt <img src="/static/image/index/arrow.svg" alt="img_arrow"></button>
+        "> Order my Custom T-shirt <img src="/static/image/index/arrow.svg" alt="img_arrow"></a>
+                </div>
+                {% else %}
+                <a href="/productPage/" class="btn py-2 btn-block ms-5" style="
+          border-radius: 0px;
+          background-color: #0066ca;
+          color: white;
+          width: 100%;
+          height: 100%;
+        "> Order my Custom T-shirt <img src="/static/image/index/arrow.svg" alt="img_arrow"></a>
+        {% endif %}
                 </div>
                 <div class="col">
 

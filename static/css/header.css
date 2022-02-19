@@ -32,6 +32,13 @@
 
 }
 
+.first-container {
+    background-image: url('/static/image/index/background.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .first-container-content {
     width: 100%;
 }
@@ -47,18 +54,7 @@
     font-size: 28px;
 }
 
-.first-content {
-    background-image: url('/static/image/index/background.svg');
-    height: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-
-}
-
 #navbar {
-
     top: 0;
     transition: 0.3s;
     width: 100%;
@@ -69,26 +65,17 @@
     height: 50%;
 }
 
-.first-container-content {
-    background-color: #FFFFFF;
-    color: black;
-    height: 75%;
-}
-
 .checked {
     color: skyblue;
 }
 
-.first-content-list, .second-list-content {
-    text-decoration: none;
-    margin-left: -30px;
+
+
+.first-container {
+    background-image: url('/static/image/index/background.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-.first-list-element, .second-list-element {
-    text-decoration: none;
-    overflow: hidden;
-}
-
-
 
 /* About Us CSS */

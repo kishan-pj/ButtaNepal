@@ -1,165 +1,85 @@
 {% extends 'base.html' %} {% block content %}
-
-<section class="container-fluid first-content pb-5 pt-5">
-  <div class="row mx-lg-5 px-lg-2 content-custom">
-    <div class="col-lg mt-5 ms-lg-5 first-container-content pb-5">
-      <div class="col-lg mt-5 py-3 ms-lg-5" data-aos="slide-right">
-        <h2 class="title-content">CUSTOM PRINTED T-SHIRTS</h2>
-        <ul class="first-content-list mt-lg-5 py-0">
-          <li class="first-list-element mt-5">
-            You send us your design ~ We print them on a <br />t-shirt for you.
-            How convinient?
-          </li>
+<section class="container-fluid first-container" data-bs-spy="scroll" data-bs-target="#navbar-example2"
+  data-bs-offset="0" tabindex="0">
+  <div class="row py-5">
+    <div class="offset-sm-2 col-sm-5 bg-light mb-4" data-aos="slide-right">
+      <div class="col-2 pt-md-5"></div>
+      <div class="offset-sm-1 mt-sm-3">
+        <p style="font-size: 28px;font-weight: 700;">CUSTOM PRINTED T-SHIRTS</p>
+      </div>
+      <div class="offset-sm-1 col-sm-10 pt-2">
+        <p>You send us your design ~ We print them on a t-shirt for you. How convinient?</p>
+        <ul style="padding-left:0%;">
           <li class="first-list-element mt-3">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
-            <span class="mx-3"><u>508 Reviews</u></span>
-          </li>
-          <li class="first-list-element pt-3">
-            Rated 5 Stars by 500+ Customers
-          </li>
-          <li class="first-list-element py-3">
-            <img
-              src="/static/image/index/truck.svg"
-              class="img-fluid mx-0"
-              alt=""
-              style="height: 25px"
-            />&nbsp;Delivery all over Nepal
+            <span class="ms-3"><u>508 Reviews</u></span>
           </li>
         </ul>
-        <button
-          type="button"
-          class="btn mt-3"
-          style="background-color: #0066ca; color: white; border-radius: 0px"
-        >
-          &nbsp;&nbsp;ORDER NOW&nbsp;&nbsp;<img
-            src="/static/image/index/arrow.svg"
-            style="color: white"
-          />
-        </button>
-      </div>
-    </div>
-    <div
-      class="col-lg-6 mt-4 px-lg-5"
-      data-aos="slide-left"
-      >
-      <img
-        class="img-fluid"
-        src="/static/image/index/assert.svg"
-        style="height: 55%"
-      />
-    </div>
-  </div>
-</section>
+        <p>Rated 5 Stars by 500+ Customers</p>
 
-<section class="container-fluid py-5" style="background-color: #e5e5e5">
-  <div class="row mx-4 pt-5">
-      <div class="col mx-2 col-lg-5 col-md-4 col-sm-2" data-aos="zoom-in-up">
-      <img
-        class="img-fluid"
-        src="/static/image/index/assert-1.svg"
-        style="height: 80%"
-      />
-    </div>
-    <div class="col">
-      <div class="col mx-5 py-4 mt-5" data-aos="zoom-in-up">
-        <h2 class="title-content">BUTTANEPAL™ CUSTOM T-SHIRT</h2>
-        <ul class="second-list-content my-3">
-          <li class="second-list-element my-4">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="mx-3"><u>508 Reviews</u></span>
-          </li>
-          <li class="second-list-element my-4">
-            You send us your design ~ We print them on a <br />t-shirt for you.
-            How convinient?
-          </li>
-          <li class="second-list-element my-4">
-            Custom Printed T-shirt @ Rs. 1500 per <br />
-            tee. Can it get any more affordable?
-          </li>
-        </ul>
-        <div class="col" style="width: 75%">
-          <button
-            class="btn py-2 my-2 btn-lg btn-block"
-            style="
-              border-radius: 0px;
-              background-color: #0066ca;
-              color: white;
-              width: 100%;
-            "
-          >
-            View Product<img src="/static/image/index/arrow.svg" />
-          </button>
+        <img src="/static/image/index/truck.svg" height="40" width="40"><span>Delivery all over Nepal</span><br>
+        <div class="col-lg-5 mt-3">
+          {% if user.is_login == True %}
+          <a href="/productpage/{{user.customer_id}}" class="btn btn-lg btn-primary my-3"
+            style="border-radius: 0%;">Order Now<i class="fa-solid fa-arrow-right ps-2"></i></a>
+          {% else %}
+          <a href="/productPage/" class="btn btn-lg btn-primary my-3" style="border-radius: 0%;">Order Now<i
+              class="fa-solid fa-arrow-right ps-2"></i></a>
+          {% endif%}
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="container-fluid m-auto mt-3 pt-5 mb-5">
-  <div class="row my-5 mx-3 justify-content-md-center">
-    <div class="col-lg-6 col-md-3 col-sm-2" data-aos="zoom-in-up">
-      <h2 class="title-content my-2">HOW TO ORDER?</h2>
-      <div class="order-content my-2" style="line-height: 1.5">
-        <img
-          src="/static/image/index/blue-arrow.svg"
-          height="40px"
-          width="40px"
-          style="display: inline-block"
-        />Go to the product page and place an
-        <p style="margin-left: 40px">order with your requirement.</p>
-        <img
-          src="/static/image/index/blue-arrow.svg"
-          height="40px"
-          width="40px"
-          style="display: inline-block"
-        />Upload your own design or ask us to
-        <p style="margin-left: 40px">design it for you.</p>
-        <img
-          src="/static/image/index/blue-arrow.svg"
-          height="40px"
-          width="40px"
-          style="display: inline-block"
-        />Review your final t-shirt mockup via
-        <p style="margin-left: 40px">email or facebook messenger.</p>
-        <img
-          src="/static/image/index/blue-arrow.svg"
-          height="40px"
-          width="40px"
-          style="display: inline-block"
-        />Get your customized t-shirt delivered
-        <p style="margin-left: 40px">at your shipping address.</p>
-      </div>
-    <div class="col" style="width: 75%" >
-      <button
-        class="btn py-2 my-5 btn-lg btn-block"
-        style="
-          border-radius: 0px;
-          background-color: #0066ca;
-          color: white;
-          width: 100%;
-        "
-      >
-        View Product<img src="/static/image/index/arrow.svg" />
-      </button>
+    <div class="col-sm-3 ms-sm-3" data-aos="slide-left">
+      <img src="/static/image/index/assert.svg" class="img-fluid">
     </div>
   </div>
-  <div class="col mx-4 col-lg-5 col-md-4 col-sm-2" data-aos="zoom-in-up">
-    <img
-      class="img-fluid"
-      src="/static/image/index/assert-2.svg"
-      style="height: 80%"
-    />
-  </div>
 </section>
 
+<section class="container-fluid py-5">
+  <div class="row">
+    <div class="offset-sm-2 col-sm-3" data-aos="zoom-in-up">
+      <img src="/static/image/index/assert-1.svg" class="img-fluid">
+    </div>
+    <div class="col-1"></div>
+    <div class="col-sm-6" data-aos="zoom-in-up">
+      <div class="col-12 pt-5"></div>
+      <div class="col-lg-12 mt-sm-4">
+        <p style="font-size: 28px;font-weight: 700;">BUTTANEPAL™ CUSTOM T-SHIRT</p>
+      </div>
+      <div class="col-lg-8 mt-3">
+        <ul class="mt-4" style="padding-left:0%;">
+          <li class="first-list-element mt-3">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="ms-3"><u>508 Reviews</u></span>
+          </li>
+        </ul>
+        <p class="mt-4">You send us your design ~ We print them on a t-shirt for you. How convinient?</p>
+        <p class="mt-4">Custom printed T-shirt @ Rs. 1500 per tee. Can it get any more affordable?</p>
+        <div class="col-12 d-grid">
+          {% if user.is_login == True %}
+          <a href="/productpage/{{user.customer_id}}" class="btn btn-primary btn-lg mt-4" type="button"
+            style="border-radius: 0%;">
+            View product<i class="fa-solid fa-arrow-right ps-2"></i>
+            {% else %}
+            <a href="/productPage/" class="btn btn-primary btn-lg mt-4" type="button" style="border-radius: 0%;">
+              View product<i class="fa-solid fa-arrow-right ps-2"></i>
+              {% endif %}
+            </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 {% include 'video/video_section.html' %}
 
@@ -168,8 +88,3 @@
 {% include 'newsletter/newsletter.html' %}
 
 {% endblock %}
-
-
-
-
-

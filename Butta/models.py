@@ -17,7 +17,7 @@ class Customer(models.Model):
     review = models.CharField(max_length=500, blank=True)
 
     class Meta:
-        db_table = "customer_tbl" 
+        db_table = "customer_tbl"
 
 
 class Product(models.Model):
@@ -48,6 +48,8 @@ class Order(models.Model):
     country_name = models.CharField(max_length=50, blank=True)
     address = models.CharField(max_length=100, blank=True)
     butta = models.FileField(upload_to="butta", default="butta.jpg", blank=True)
+    payment_method = models.CharField(max_length=50, blank=True)
+    email = models.CharField(max_length=50,blank=True)
 
     class Meta:
         db_table = "order_tbl"

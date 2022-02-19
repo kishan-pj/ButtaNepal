@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10%;
+}
+
+.form-container {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.form-title {
+    font-size: 36px;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.checkout-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-line {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    background-color: #f2f2f2;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+}
+
+/* input[type="text"], input[type="email"]::placeholder {
+    font-size: 14px;
+    color: #b9b9b9;
+} */
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.input-container .input-line {
+    width: 48%;
+}
+
+input[type="button"] {
+    background-color: #0066ca;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    height: 50px;
+    padding: 0 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+input[type="button"]:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+
+}
+
+.uploadbutton button {
+    text-decoration: none;
+    background-color: #0066ca;
+    color: #ffff;
+    padding: 4px 20px;
+    font-size: 17px;
+    /* border-radius: 0px; */
+    margin-top: 0%;
+    border: 8px solid #0066ca;
+}
+
+.uploadbutton button:hover {
+    color: #fff;
+}
+
+.button a {
+    text-decoration: none;
+    background-color: #000000;
+    color: #ffff;
+    padding: 4px 20px;
+    font-size: 17px;
+    margin-top: 0%;
+    border: 8px solid #000000;
+}
+
+.button a:hover {
+    color: #fff;
+}

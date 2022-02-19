@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-4 sticky-top"
+    style="filter: drop-shadow(0 0 0.75rem black);" id="navbar-example2">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                {% if user.is_login == True %}
+                <a class="nav-link text-dark" aria-current="page" href="/index/">Home</a>
+                {% else %}
+                <a class="nav-link text-dark" aria-current="page" href="/">Home</a>
+                {% endif %}
+                <a class="nav-link text-dark" href="/aboutus/">About us</a>
+                {% if user.is_login == True %}
+                <a class="navbar-brand ps-4" href="/index/">
+                    <img src="/static/image/header/logo.svg" alt="" width="120" height="24">
+                </a>
+                {% else %}
+                <a class="navbar-brand ps-4" href="/">
+                    <img src="/static/image/header/logo.svg" alt="" width="120" height="24">
+                </a>
+                {% endif %}
+                {% if user.is_login == True %}
+                <a class="nav-link text-dark" href="/update/{{user.customer_id}}">Update Profile</a>
+                {% endif %}
+                <a class="nav-link text-dark" href="#contact" tabindex="-1" aria-disabled="true">Contact</a>
+                {% if user.is_login == True %}
+                <a class="nav-link text-dark" href="/productpage/{{user.customer_id}}">Order Now</a>
+                {% else %}
+                <a class="nav-link text-dark" href="/productPage/">Order Now</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>
+</section>

@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>Order a T-shirt | ButtaNepal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/viewproduct.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/eafbf77353.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    {% include 'header/nav.html' %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col py-5"
+                style="background-image: url(/static/image/ButtaNepalHeader.png) ;background-repeat: no-repeat;background-size:cover; background-position: center;height:50%">
+                <div class="d-flex py-4 justify-content-center">
+                    <h1 class="title">ORDER A T-SHIRT</h1>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <img src="/static/ButtaNepal/product-image.png" class="about-image">
+                </div>
+
+                <div class="col-md-6">
+                    <div class="text-box1">
+                        <h1 class="heading">BUTTANEPAL™ CUSTOM T-SHIRT</h1>
+                    </div>
+                    <div class="paragraph-box1">
+                        <h1 style="color: #0066ca; margin-top: -15px; margin-bottom: 20px;">$US19.99</h1><span
+                            style="color: #0066ca;" class="fa fa-star checked"></span>
+                        <span style="color: #0066ca;" class="fa fa-star checked"></span>
+                        <span style="color: #0066ca;" class="fa fa-star checked"></span>
+                        <span style="color: #0066ca;" class="fa fa-star checked"></span>
+                        <span style="color: #0066ca;" class="fa fa-star checked"></span> &nbsp; <u>508 Reviews</u>
+                        <br><br><br>
+                        <p><i style="color: #0066ca;" class="fas fa-shipping-fast"></i> &nbsp;Free & Tracked Worldwide
+                            Shipping</p>
+                        <!-- <p>demand company that allows anybody</p>
+                        <p>to order a custom printed T-shirt for any </p>
+                        <p>purpose.</p> -->
+                        <br><br>
+
+                        <div class="uploadbutton">
+                            <a href="/checkout/" class="btn-One"> Start Order &nbsp;⇢</a>
+                        </div>
+
+                        <br><br><br>
+
+
+                        <div class="dashedbutton">
+                            <a href="#" class="btn-One"> Want Us to Design For You? &nbsp;⇢</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="offset-sm-6 col-md-6" style="border: 1px solid #0066ca;">
+                    <h3 class="text-center text-decoration-underline">Reviews</h3>
+                    {% for data in data|slice:"0:4" %}
+                    <div class="toast-header">
+                        <img src="/static/assets/{{data.customer_picture}}" class="me-2" style="border-radius: 50%;"
+                            height="50" width="50" alt="...">
+                        <strong class="me-auto">{{data.customer_first}} {{data.customer_last}}</strong>
+                    </div>
+                    <div class="toast-body ms-md-5">
+                        {{data.review}}
+                    </div>
+                    {% endfor %}
+
+                    <form class="form-floating mt-3" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                            style="height: 100px" name="review"></textarea>
+                        <label for="floatingTextarea2">Comments</label>
+                        {% if user.is_login == True %}
+                        <button class="btn text-light bg-primary mt-3" type="submit">Submit</button>
+                        {% endif %}
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
